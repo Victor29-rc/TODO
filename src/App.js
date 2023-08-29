@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+
+import Card from './components/UI/Card';
+import TodoList from './components/TODO/TodoList';
+import Header from './components/HEADER/Header';
+import TodoForm from './components/TODO/TodoForm';
+import RegisterProvider from './context/register-added-context';
 
 function App() {
+  const [isFormOpened, setIsFormOpened] = useState(false);
+
+  const openFormHandler = () => {
+    setIsFormOpened(true);
+  };
+
+  const closeFormHandler = () => {
+    setIsFormOpened(false);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header onOpenFormHandler={openFormHandler} />
+      <RegisterProvider>
+        <>
+          <Card
+            styles={{
+              maxWidth: '80%',
+              backgroundColor: 'rgb(149, 25, 160)',
+              borderRadius: '8px',
+            }}
+          >
+            <TodoList />
+          </Card>
+          {isFormOpened && <TodoForm onCloseFormHandler={closeFormHandler} />}
+        </>
+      </RegisterProvider>
     </div>
   );
 }

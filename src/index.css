@@ -5,9 +5,139 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #222222;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+ul li {
+  margin: 20px 0px;
+}
+
+ul li:first-of-type {
+  margin-top: 5px;
+}
+
+ul li:last-of-type {
+  margin-bottom: 5px;
+}
+
+li div button:last-of-type,
+header button:last-of-type {
+  margin-bottom: 0px;
+}
+
+.modal-content {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: #ffffff;
+  color: black;
+  border-radius: 8px;
+  padding: 20px 40px;
+}
+
+.modal-backdrop {
+  position: absolute;
+  background: black;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+form {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-control {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.form-control input[type='text'],
+.form-control textarea {
+  width: -webkit-fill-available;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-control input[type='text']:focus-visible,
+.form-control textarea:focus-visible {
+  outline: none;
+}
+
+.form-control:not(.invalid) input[type='text']:focus,
+.form-control:not(.invalid) textarea:focus {
+  background: #e7e7ff;
+  border-color: #1212c4;
+}
+
+.form-control.invalid input,
+.form-control.invalid textarea {
+  background-color: #ffc3c3;
+  border-color: red;
+}
+
+form .form-actions {
+  text-align: right;
+}
+
+form .form-actions input {
+  text-align: right;
+  padding: 4px 19px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid;
+  color: white;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+form .form-actions input:first-of-type {
+  background-color: #9e159f;
+  border-color: #9e159f;
+  margin-right: 10px;
+  color: white;
+}
+
+form .form-actions input[type='submit'] {
+  background-color: #1212c4;
+  border-color: #1212c4;
+}
+
+form .form-actions input[type='submit'].disabled {
+  background-color: #1212c4;
+  background-color: #676767;
+  border-color: #676767;
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.form-header-section {
+  text-align: center;
+  font-family: sans-serif;
 }

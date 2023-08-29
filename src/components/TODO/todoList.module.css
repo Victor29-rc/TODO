@@ -1,0 +1,22 @@
+.todo_list {
+  margin: 2% auto;
+  background: rgb(149, 25, 160);
+  border-color: black;
+  width: 96%;
+  padding: 0px 20px;
+  list-style: none;
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+.todo_list::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(234, 0, 255);
+  border-radius: 8px;
+}
+
+.todo_list::-webkit-scrollbar-thumb {
+  background-color: rgb(94, 29, 100);
+  border-radius: 8px;
+  width: 6px;
+}

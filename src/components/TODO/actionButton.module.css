@@ -1,0 +1,13 @@
+.action_button {
+  height: 30px;
+  width: 100px;
+  border-radius: 4px;
+  outline: none;
+  display: block;
+  background: transparent;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #ffff;
+  border: 1px solid rgb(234, 0, 255);
+  text-align: center;
+}

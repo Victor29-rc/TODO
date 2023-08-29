@@ -1,0 +1,25 @@
+.todo_item {
+  border-radius: 8px;
+  /* border: 1px solid black; */
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 8px rgb(234, 0, 255);
+  background: rgb(92 36 97);
+}
+
+.item_title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.item_description {
+  font-weight: lighter;
+}
+
+.todo_info_container {
+  width: 88%;
+}
